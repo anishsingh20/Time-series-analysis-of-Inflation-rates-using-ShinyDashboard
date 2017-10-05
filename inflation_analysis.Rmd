@@ -40,5 +40,8 @@ year<-as.character(year)#converting to character type to use in gather()
 #new dataframe which is in long format
 inf<-inflation %>% gather(year,key = "Year",value="InflationRate")
 inf<-na.omit(inf) #omitting NA values
+
+names(inf)<-c("region","year","inflationRate")
+
 ```
 
