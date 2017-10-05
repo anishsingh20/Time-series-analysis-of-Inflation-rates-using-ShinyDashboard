@@ -52,7 +52,7 @@ Now what we can do is easily filter the data for specific countries and make a s
 
 ### Inflation Rates in India
 
-Generating a data frame for India and other emerging and developed economies.
+Generating a data frame for India and other major emerging and developed economies.
 
 ```{r}
 
@@ -63,9 +63,7 @@ Japan<-filter(inf,region=="Japan")
 US<-filter(inf,region=="United States")
 EU<-filter(inf,region=="European Union")
 UK<-filter(inf,region=="United Kingdom")
-
-
-
+Fr<-filter(inf,region=="France")
 
 
 ```
