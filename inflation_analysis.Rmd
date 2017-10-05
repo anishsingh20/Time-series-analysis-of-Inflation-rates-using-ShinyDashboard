@@ -35,7 +35,7 @@ The data set is quiet wide. So I will gather the dataset and make Year as a seap
 #using gather() function from tidyr
 
 year<-c(1980:2022) #making a vector consisting of all years
-year<-as.character(year)
+year<-as.character(year)#converting to character type to use in gather()
 
 inf<-inflation %>% gather(year,key = "Year",value="InflationRate")
 ```
