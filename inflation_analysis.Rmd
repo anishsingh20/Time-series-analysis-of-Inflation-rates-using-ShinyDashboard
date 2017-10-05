@@ -52,10 +52,13 @@ Now what we can do is easily filter the data for specific countries and make a s
 
 ### Inflation Rates in India
 
-Generating a data frame for India's inflation rates over time
+Generating a data frame for India and other emerging and developed economies.
 
 ```{r}
+
 India<-filter(inf,region=="India")
+US<-filter(inf,region=="United States")
+EU<-filter(inf,region=="European Union")
 
 
 
