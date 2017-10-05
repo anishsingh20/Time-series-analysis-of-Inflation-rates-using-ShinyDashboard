@@ -16,6 +16,9 @@ require(tidyr)
 Reading the datset.
 
 ```{r}
+library(readxl)
+inflation <- read_excel("F:/PROJECTS/Datasets/IMF/inflation.xls")
+View(inflation)
 
 
 ```
