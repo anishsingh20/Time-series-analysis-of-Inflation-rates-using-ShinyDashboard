@@ -57,8 +57,14 @@ Generating a data frame for India and other emerging and developed economies.
 ```{r}
 
 India<-filter(inf,region=="India")
+China<-filter(inf,region=="China, People's Republic of")
+Ger<-filter(inf,region=="Germany")
+Japan<-filter(inf,region=="Japan")
 US<-filter(inf,region=="United States")
 EU<-filter(inf,region=="European Union")
+UK<-filter(inf,region=="United Kingdom")
+
+
 
 
 
