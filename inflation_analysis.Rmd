@@ -45,3 +45,19 @@ names(inf)<-c("region","year","inflationRate")
 
 ```
 
+Now what we can do is easily filter the data for specific countries and make a separate data frame for them and analyze their inflation rates over time specifically and perform time series analysis.
+
+---------------
+
+
+### Inflation Rates in India
+
+Generating a data frame for India's inflation rates over time
+
+```{r}
+India<-filter(inf,region=="India")
+
+
+
+```
+
