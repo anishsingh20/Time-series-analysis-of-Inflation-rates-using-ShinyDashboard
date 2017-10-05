@@ -22,4 +22,21 @@ View(inflation)
 
 
 ```
+Starting with some data processing and transformations as well as cleaning.
+
+```{r}
+head(inflation)
+
+```
+
+The data set is quiet wide. So I will gather the dataset and make Year as a seaparate column and the inflation rates of each year separate for easy analysis and visualization of data.
+
+```{r}
+#using gather() function from tidyr
+
+year<-c(1980:2022) #making a vector consisting of all years
+year<-as.character(year)
+
+inf<-inflation %>% gather(year,key = "Year",value="InflationRate")
+```
 
