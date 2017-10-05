@@ -58,24 +58,31 @@ Generating a data frame for India and other major emerging and developed economi
 
 ```{r}
 
+changeType<-function(x1,x2) 
+{
+  
+  as.numeric(x1); as.numeric(x2)
+}
+
 India<-filter(inf,region=="India")
 India$inflationRate<-as.numeric(India$inflationRate)
 India$year<-as.numeric(India$year)
 
-China<-na.omit(filter(inf,region=="China, People's Republic of"))
-changeType(China$year,China$inflationRate)
+China<-filter(inf,region=="China, People's Republic of")
+China[1,3]<-0
+changeType(c(China$year,China$inflationRate))
 
 Ger<-filter(inf,region=="Germany")
+changeType(Ger$inflationRate,Ger$year)
+
+
 Japan<-filter(inf,region=="Japan")
 US<-filter(inf,region=="United States")
 EU<-filter(inf,region=="European Union")
 UK<-filter(inf,region=="United Kingdom")
 Fr<-filter(inf,region=="France")
 
-changeType<-function(x1,x2) {
-  as.numeric(x1)
-  as.numeric(x2)
-}
+
 
 ggplot(aes(x=year,y=inflationRate),data=India) +
   geom_point(size=2,color="orange") + 
