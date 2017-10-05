@@ -1,0 +1,22 @@
+---
+title: "Analyzing Global Inflation Rates"
+output: html_notebook
+---
+
+#### This project will aim at analyzing the inflation rates globally and countrywise over time from 1980 onwards.
+
+Loading the required packages
+```{r}
+require(ggplot2)
+require(dplyr)
+require(tidyr)
+
+```
+
+Reading the datset.
+
+```{r}
+
+
+```
+
