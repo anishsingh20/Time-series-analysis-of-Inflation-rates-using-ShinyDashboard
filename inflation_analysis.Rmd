@@ -41,7 +41,7 @@ year<-as.character(year)#converting to character type to use in gather()
 inf<-inflation %>% gather(year,key = "Year",value="InflationRate")
 inf<-na.omit(inf) #omitting NA values
 
-names(inf)<-c("region","year","inflationRate")
+names(inf)<-c("region","year","inflation")
 
 inf$year<-as.integer(inf$year)
 
@@ -58,36 +58,39 @@ Generating a data frame for India and other major emerging and developed economi
 
 ```{r}
 
-changeType<-function(x1,x2) 
+changeType<-function(df,x) 
 {
   
-  as.numeric(x1); as.numeric(x2)
+  df[,x]<-as.integer(df[,x])
 }
 
 India<-filter(inf,region=="India")
-India$inflationRate<-as.numeric(India$inflationRate)
+India$inflation<-as.numeric(India$inflation)
 India$year<-as.numeric(India$year)
 
 China<-filter(inf,region=="China, People's Republic of")
 China[1,3]<-0
-changeType(c(China$year,China$inflationRate))
+
 
 Ger<-filter(inf,region=="Germany")
-changeType(Ger$inflationRate,Ger$year)
+changeType(Ger,3)
 
 
 Japan<-filter(inf,region=="Japan")
+changeType(Japan,year,inflationRate)
+
 US<-filter(inf,region=="United States")
 EU<-filter(inf,region=="European Union")
 UK<-filter(inf,region=="United Kingdom")
 Fr<-filter(inf,region=="France")
 
 
-
-ggplot(aes(x=year,y=inflationRate),data=India) +
+theme_set(theme_bw()  )
+ggplot(aes(x=year,y=inflation),data=India) +
   geom_point(size=2,color="orange") + 
   geom_line(color="orange") +
-  scale_x_continuous(limits=c(1980,2017),breaks=seq(1980,2017,5))
+  scale_x_continuous(limits=c(1980,2017),breaks=seq(1980,2017,5)) +
+  labs(x="Year",y="Inflation Rates",title="Time series of Inflation Rates for India")
 
 
   
