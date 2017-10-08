@@ -99,6 +99,13 @@ ggplot(aes(x=year,y=inflation),data=India) +
 
 ```
 
+
+
+------------
+
+
+### Analyzing Inflation Rates in USA
+
 Checking inflation rates for United states of America over time.
 
 First let's build a small R function to easily plot time series plots for visualizing the inflation rates over time i.e the time series plot.
@@ -128,3 +135,30 @@ tsplot(US,US$year,US$inflation,"purple","brown","Inflation Rates for USA over ti
 
 ```
 In the above plot we can observe that the *inflation* for year __2009 is negetive__ and negetive inflation is also called __deflation__ which is more harmful for an economy than inflation. It is negetive due to that fact that in 2008-2009 their economy faced a __recession__. High deflation rates signify that the economy is under recession i.e demand of goods have gone down significantly, resulting in very low price of goods. Layoffs in jobs and decrease in wages of employees, high unemployment etc are some examples of how recession affects an economy.
+
+
+--------------------
+
+### Analyzing Inflation rates for German Economy
+
+```{r}
+Ger$inflation<-as.numeric(Ger$inflation)
+
+tsplot(Ger,Ger$year,Ger$inflation,"purple","purple","Inflation Rates of Germany")
+
+```
+
+
+
+-----------
+
+### France
+
+
+```{r}
+Fr$inflation<-as.numeric(Fr$inflation)
+tsplot(Fr,Fr$year,Fr$inflation,"#FD5D01","#FD5D01","Inlfation rates for France")
+
+```
+
+
