@@ -83,6 +83,7 @@ US<-filter(inf,region=="United States")
 EU<-filter(inf,region=="European Union")
 UK<-filter(inf,region=="United Kingdom")
 Fr<-filter(inf,region=="France")
+uae<-filter(inf,region=="United Arab Emirates")
 
 
 theme_set(theme_bw()  )
@@ -148,6 +149,15 @@ tsplot(Ger,Ger$year,Ger$inflation,"purple","purple","Inflation Rates of Germany"
 
 ```
 
+-----------------
+
+### United Kingdom
+
+```{r}
+UK$inflation<-as.numeric(UK$inflation)
+tsplot(UK,UK$year,UK$inflation,"#54A50D","#54A50D","Inflation Rates for United Kingdom")
+
+```
 
 
 -----------
