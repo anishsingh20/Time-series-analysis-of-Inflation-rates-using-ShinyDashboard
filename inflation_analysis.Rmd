@@ -161,4 +161,16 @@ tsplot(Fr,Fr$year,Fr$inflation,"#FD5D01","#FD5D01","Inlfation rates for France")
 
 ```
 
+-----------
+
+
+### China
+
+
+```{r}
+China$inflation<-as.numeric(China$inflation)
+tsplot(China,China$year,China$inflation,"#078CE5","#078CE5","Inflation Rates for China")
+
+```
+
 
