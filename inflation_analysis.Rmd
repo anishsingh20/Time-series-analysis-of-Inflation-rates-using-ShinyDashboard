@@ -172,5 +172,8 @@ China$inflation<-as.numeric(China$inflation)
 tsplot(China,China$year,China$inflation,"#078CE5","#078CE5","Inflation Rates for China")
 
 ```
+We can notice that China had very high inflation rates initially,before 1997. High inflation can be caused by an increase in demand for goods relative to supply. When more people fight over fewer goods, the price increases. It is just as true for an entire country as it is for a car on eBay. We have seen an increase in the inflation rate, in part, because countries like China and India, which had virtually no industrial base a few generations ago, have billions of citizens poised to enter the middle class in the coming years
+
+Then it has negetive inflation rates for years 1998-1999, 2002, 2009 i.e had high deflation.
 
 
