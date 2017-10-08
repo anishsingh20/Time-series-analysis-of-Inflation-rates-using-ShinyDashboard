@@ -118,19 +118,13 @@ tsplot<-function(df,year,rate,pcol,lcol,title) {
 
 ```
 
+The function above takes a data set as argument folllowed by x-axis attribute , y-axis attribute and then the other plotting variables i.e point and line color and title.
 
 ```{r}
-
-
-
 
 US$inflation<-as.numeric(US$inflation)
 
 tsplot(US,US$year,US$inflation,"purple","brown","Inflation Rates for USA over time")
 
-
-
-
-
 ```
-
+In the above plot we can observe that the *inflation* for year __2009 is negetive__ and negetive inflation is also called __deflation__ which is more harmful for an economy than inflation. It is negetive due to that fact that in 2008-2009 their economy faced a __recession__. High deflation rates signify that the economy is under recession i.e demand of goods have gone down significantly, resulting in very low price of goods. Layoffs in jobs and decrease in wages of employees, high unemployment etc are some examples of how recession affects an economy.
