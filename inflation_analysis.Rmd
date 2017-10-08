@@ -101,12 +101,36 @@ ggplot(aes(x=year,y=inflation),data=India) +
 
 Checking inflation rates for United states of America over time.
 
+First let's build a small R function to easily plot time series plots for visualizing the inflation rates over time i.e the time series plot.
+
 ```{r}
 #making a ggplot function to plot timer series plots
-
-tsplot<-function(df,x,y) {
+tsplot<-function(df,year,rate,pcol,lcol,title) {
   
+  
+  ggplot(aes(x = year,y= rate),data=df) +
+  geom_point(size=2,color=pcol) + 
+  geom_line(color=lcol) +
+  scale_x_continuous(limits=c(1980,2017),breaks=seq(1980,2017,5)) +
+  labs(title=title)
+    
 }
+
+```
+
+
+```{r}
+
+
+
+
+US$inflation<-as.numeric(US$inflation)
+
+tsplot(US,US$year,US$inflation,"purple","brown","Inflation Rates for USA over time")
+
+
+
+
 
 ```
 
