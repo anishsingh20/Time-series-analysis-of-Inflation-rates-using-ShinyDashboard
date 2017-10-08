@@ -130,7 +130,7 @@ The function above takes a data set as argument folllowed by x-axis attribute , 
 ```{r}
 
 US$inflation<-as.numeric(US$inflation)
-
+theme_set(theme_bw())
 tsplot(US,US$year,US$inflation,"purple","brown","Inflation Rates for USA over time")
 
 ```
@@ -143,7 +143,7 @@ In the above plot we can observe that the *inflation* for year __2009 is negetiv
 
 ```{r}
 Ger$inflation<-as.numeric(Ger$inflation)
-
+theme_set(theme_bw())
 tsplot(Ger,Ger$year,Ger$inflation,"purple","purple","Inflation Rates of Germany")
 
 ```
@@ -157,6 +157,7 @@ tsplot(Ger,Ger$year,Ger$inflation,"purple","purple","Inflation Rates of Germany"
 
 ```{r}
 Fr$inflation<-as.numeric(Fr$inflation)
+theme_set(theme_bw())
 tsplot(Fr,Fr$year,Fr$inflation,"#FD5D01","#FD5D01","Inlfation rates for France")
 
 ```
@@ -169,6 +170,7 @@ tsplot(Fr,Fr$year,Fr$inflation,"#FD5D01","#FD5D01","Inlfation rates for France")
 
 ```{r}
 China$inflation<-as.numeric(China$inflation)
+theme_set(theme_bw())
 tsplot(China,China$year,China$inflation,"#078CE5","#078CE5","Inflation Rates for China")
 
 ```
