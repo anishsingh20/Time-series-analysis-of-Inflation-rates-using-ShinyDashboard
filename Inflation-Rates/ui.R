@@ -2,7 +2,7 @@ library(shinydashboard)
 require(shiny)
 #layout of the dashboard
 
-country<-c("India","USA","China","Germany","UK","European Union","France","UAE")
+country<-c("India","United States","China, People's Republic of","Russian Federation","Germany","United Kingdom","European Union","France","United Arab Emirates")
 
 dashboardPage(
   #defines header
