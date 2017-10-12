@@ -93,8 +93,8 @@ ggplot(aes(x=year,y=inflation),data=India) +
   scale_x_continuous(limits=c(1980,2017),breaks=seq(1980,2017,5)) +
   labs(x="Year",y="Inflation Rates",title="Time series of Inflation Rates for India")
 
-
-  
+#hchart(India, "line", hcaes(x = year, y = inflation))
+                
 
 
 

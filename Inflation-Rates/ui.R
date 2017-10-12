@@ -1,5 +1,6 @@
 library(shinydashboard)
 require(shiny)
+require(highcharter)
 #layout of the dashboard
 
 country<-c("India","United States","China, People's Republic of","Russian Federation","Germany","United Kingdom","European Union","France","United Arab Emirates")
@@ -41,7 +42,15 @@ dashboardPage(
               #box for plotting the time series plot
             column(12,
                    
-              box(plotOutput("tsplot",width = 400),width="12")
+              box(
+                
+                plotOutput("tsplot",
+                brush = "plot_brush",
+                hover = "plot_hover"
+               
+              ), 
+              
+              width="12") #end box2
           
                   )#end column
                 )
@@ -60,4 +69,5 @@ dashboardPage(
   
     
 )#end body
-)
+
+)#end dashboard
