@@ -226,12 +226,15 @@ We will use the package __highcharter__.
 require(highcharter)
 
 hc <- highchart() %>% 
-  hc_xAxis(categories = India$year) %>% 
+  hc_xAxis(title="Year",inf$year) %>% 
   hc_add_series(name = "India", data = India$inflation) %>% 
   hc_add_series(name = "USA", data = US$inflation) %>%
   hc_add_series(name = "UK", data = UK$inflation) %>%
   hc_add_series(name = "China", data = China$inflation) %>%
-  hc_add_series(name = "Ger", data = Ger$inflation)
+  hc_add_series(name = "Ger", data = Ger$inflation) %>%
+  hc_yAxis(title="Inflation Rates ")%>%
+  #to add colors
+  hc_colors(c("red","blue","green","purple","yellow"))
 
 hc
 
