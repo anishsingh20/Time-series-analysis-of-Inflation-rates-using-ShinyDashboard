@@ -12,6 +12,11 @@ dashboardPage(
   dashboardSidebar(),
   #defines bodys
   dashboardBody(
+    #making boxes in row
+    fluidRow(
+    box(selectInput("country",label="Select Country")) ,  
+    box(plotOutput("india"),width = 400)
+    )#end row
     
     
   )
