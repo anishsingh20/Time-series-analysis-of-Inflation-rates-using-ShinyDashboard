@@ -34,14 +34,14 @@ dashboardPage(
             
             column(12,
               
-              box(selectInput("country",label="Select Country",choices=country)) 
+              box(selectInput("country",label="Select Country",choices=country),width = 12) 
                   
               ),#end column
             
               #box for plotting the time series plot
             column(12,
                    
-              box(plotOutput("tsplot",width = 400))
+              box(plotOutput("tsplot",width = 400),width="12")
           
                   )#end column
                 )
