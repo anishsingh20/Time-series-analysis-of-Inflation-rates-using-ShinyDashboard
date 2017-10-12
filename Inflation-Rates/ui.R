@@ -44,11 +44,9 @@ dashboardPage(
                    
               box(
                 
-                plotOutput("tsplot",
-                brush = "plot_brush",
-                hover = "plot_hover"
+                highchartOutput("hcontainer"),
                
-              ), 
+              
               
               width="12") #end box2
           
