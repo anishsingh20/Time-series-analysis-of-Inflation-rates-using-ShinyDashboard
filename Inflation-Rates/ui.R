@@ -50,8 +50,10 @@ dashboardPage(
               
               width="12") #end box2
           
-                  )#end column
-                )
+                  ) #end column
+                ),#end row
+                h4("Made with love from", strong("Anish Singh Walia")),
+                a("R code for this project",target="_blank",href="https://github.com/anishsingh20/Analzying-Inflation-Rates-Worldwide")
               ),
     
     
