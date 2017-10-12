@@ -31,12 +31,20 @@ dashboardPage(
           
           fluidRow(
             
-              box(selectInput("country",label="Select Country",choices=country)) ,
-          
+            
+            column(12,
+              
+              box(selectInput("country",label="Select Country",choices=country)) 
+                  
+              ),#end column
+            
               #box for plotting the time series plot
-              box(plotOutput("country",width = 400))
+            column(12,
+                   
+              box(plotOutput("tsplot",width = 400))
           
-                  )#end row
+                  )#end column
+                )
               ),
     
     
