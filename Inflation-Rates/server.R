@@ -16,7 +16,8 @@ server <- function(input, output) {
                 df$year<-as.numeric(df$year)
                 
                
-                hchart(df, "line", hcaes(x = year, y = inflation))  %>% 
+                hchart(df, "line", hcaes(x = year, y = inflation),color="red")  %>% 
+                  hc_add_series(name="USA",data = US,type="line") %>%
                   hc_add_theme(hc_theme_ffx()) 
                   #to add 3-d effects
                   #hc_chart(type = "column",

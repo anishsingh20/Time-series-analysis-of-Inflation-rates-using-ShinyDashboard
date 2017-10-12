@@ -215,3 +215,25 @@ tsplot(uae,uae$year,uae$inflation,"#0A2E90","#0A2E90","Inflation Rates for UAE")
 ```
 
 
+----------------
+
+
+### Plotting the comparative Time series plot
+
+We will use the package __highcharter__.
+
+```{r}
+require(highcharter)
+
+hc <- highchart() %>% 
+  hc_xAxis(categories = India$year) %>% 
+  hc_add_series(name = "India", data = India$inflation) %>% 
+  hc_add_series(name = "USA", data = US$inflation) %>%
+  hc_add_series(name = "UK", data = UK$inflation) %>%
+  hc_add_series(name = "China", data = China$inflation) %>%
+  hc_add_series(name = "Ger", data = Ger$inflation)
+
+hc
+
+```
+
