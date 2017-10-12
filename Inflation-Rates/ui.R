@@ -10,19 +10,46 @@ dashboardPage(
     title="Inflation Rates" ,
     dropdownMenu()
   ),
+  
+  
   #defines sidebar
-  dashboardSidebar(),
+  dashboardSidebar(
+    sidebarMenu(
+      menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
+      menuItem("About", tabName = "about", icon = icon("th"))
+    )
+  ),
+  
+  
   #defines bodys
   dashboardBody(
-    #making boxes in row
-    fluidRow(
-    box(selectInput("country",label="Select Country",choices=country)) ,
+  
+  tabItems(
     
-    #box for plotting the time series plot
-    box(plotOutput("country",width = 400))
+  #First TAB Menu-Dashboard  
+        tabItem(tabName = "dashboard",
+          
+          fluidRow(
+            
+              box(selectInput("country",label="Select Country",choices=country)) ,
+          
+              #box for plotting the time series plot
+              box(plotOutput("country",width = 400))
+          
+                  )#end row
+              ),
     
-    )#end row
     
     
-  )
+    #second tab menu- ABOUT
+          tabItem(tabName="about",
+                  
+                 h2("What is Inflation ?",style="text-align:center")
+                  
+                  
+                  )
+    )#end tabitems
+  
+    
+)#end body
 )
