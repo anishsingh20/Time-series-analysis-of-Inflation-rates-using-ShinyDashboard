@@ -21,7 +21,9 @@ dashboardPage(
     sidebarMenu(
       menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
       menuItem("About", tabName = "about", icon = icon("th")),
-      menuItem("Trade Unions",tabName="unions",icon=icon("signal"))
+      menuItem("Trade Unions",tabName="unions",icon=icon("signal")),
+      menuItem("World",tabName="world",icon=icon("globe"))
+      
     )
   ),
   
@@ -88,7 +90,16 @@ dashboardPage(
                       highchartOutput("hc3"),
                       width=12)
                   
-                  )
+                  ) ,
+          tabItem(tabName = "world",
+                  
+                  h3("World's Inflation Rates",align="center") ,
+                  
+                  box(
+                    highchartOutput("hc4"),
+                    width=12)
+            
+    )
     )#end tabitems
   
     

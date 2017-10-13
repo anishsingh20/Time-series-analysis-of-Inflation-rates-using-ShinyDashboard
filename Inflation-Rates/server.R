@@ -53,7 +53,21 @@ server <- function(input, output) {
       
     })
     
-    output$hc3<-renderHighchart({})
+    output$hc3<-renderHighchart({
+      unions<-c("Major advanced economies (G7)","European Union","Emerging and Developing Europe","ASEAN-5","Commonwealth of Independent States",
+                "Emerging and Developing Asia","Latin America and the Caribbean",
+                "Middle East, North Africa, Afghanistan, and Pakistan
+")
+    })
+    
+    output$hc4<-renderHighchart({
+      world<-inf %>% filter(region=="World")
+      world$year<-as.numeric(world$year)
+      world$inflation<-as.numeric(world$inflation)
+      #plotting the plot
+      hchart(world,hcaes(x=year,y=inflation),type="line")
+      
+    })
   
   
     
