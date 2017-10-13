@@ -54,10 +54,16 @@ server <- function(input, output) {
     })
     
     output$hc3<-renderHighchart({
-      unions<-c("Major advanced economies (G7)","European Union","Emerging and Developing Europe","ASEAN-5","Commonwealth of Independent States",
-                "Emerging and Developing Asia","Latin America and the Caribbean",
-                "Middle East, North Africa, Afghanistan, and Pakistan
-")
+      
+      union<-inf %>% filter(region==input$region)
+      union$year<-as.numeric(union$year)
+      union$inflation<-as.numeric(union$inflation)
+      hchart(union,hcaes(x=year,y=inflation),type="area",color="#2B1F97") %>%
+        hc_add_theme(hc_theme_ffx()) 
+      
+      
+      
+      
     })
     
     output$hc4<-renderHighchart({
@@ -65,7 +71,8 @@ server <- function(input, output) {
       world$year<-as.numeric(world$year)
       world$inflation<-as.numeric(world$inflation)
       #plotting the plot
-      hchart(world,hcaes(x=year,y=inflation),type="area",color="#B915A3")
+      hchart(world,hcaes(x=year,y=inflation),type="area",color="#B915A3") %>%
+        hc_add_theme(hc_theme_ffx()) 
       
     })
   
