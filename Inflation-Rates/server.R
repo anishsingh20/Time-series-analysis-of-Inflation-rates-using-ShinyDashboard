@@ -34,6 +34,24 @@ server <- function(input, output) {
       
             })
   
+    output$hc2<-renderHighchart({
+      hc <- highchart() %>% 
+        hc_xAxis(categories=inf$year) %>% 
+        hc_add_series(name = "India", data = India$inflation) %>% 
+        hc_add_series(name = "USA", data = US$inflation) %>%
+        hc_add_series(name = "UK", data = UK$inflation) %>%
+        hc_add_series(name = "China", data = China$inflation) %>%
+        hc_add_series(name = "Germany", data = Ger$inflation) %>%
+        hc_add_series(name="Japan",data=Japan$inflation) %>%
+        #to add colors
+        hc_colors(c("red","blue","green","purple","#ffffff","black"))
+      
+      hc
+      
+      
+      
+    })
+  
   
     
   }

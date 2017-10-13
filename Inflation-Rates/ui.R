@@ -4,7 +4,7 @@ require(highcharter)
 #layout of the dashboard
 
 country<-c("India","United States","Mexico","Canada","China, People's Republic of","Japan","Russian Federation","Germany","United Kingdom","European Union",
-           "ASEAN-5","New Zealand","Australia","Netherlands","Luxembourg","France","United Arab Emirates")
+           "ASEAN-5","New Zealand","Australia","Netherlands","Luxembourg","France","Qatar","United Arab Emirates")
 
 dashboardPage(
   #defines header
@@ -51,8 +51,18 @@ dashboardPage(
               
               width="12") #end box2
           
-                  ) #end column
-                ),#end row
+                  ), #end column
+            hr(),
+            h4("Relative inflation rates time series plot",align="center"),
+            br(),
+            column(12,
+                   
+                box(
+                  highchartOutput("hc2"),width=12
+                  
+                ) )
+
+              ),#end row
                 h4("Made with love from", strong("Anish Singh Walia")),
                 a("R code for this project",target="_blank",href="https://github.com/anishsingh20/Analzying-Inflation-Rates-Worldwide")
               ),
