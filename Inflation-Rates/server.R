@@ -65,7 +65,7 @@ server <- function(input, output) {
       world$year<-as.numeric(world$year)
       world$inflation<-as.numeric(world$inflation)
       #plotting the plot
-      hchart(world,hcaes(x=year,y=inflation),type="line")
+      hchart(world,hcaes(x=year,y=inflation),type="area",color="#B915A3")
       
     })
   
