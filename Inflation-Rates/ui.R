@@ -3,7 +3,8 @@ require(shiny)
 require(highcharter)
 #layout of the dashboard
 
-country<-c("India","United States","China, People's Republic of","Russian Federation","Germany","United Kingdom","European Union","France","United Arab Emirates")
+country<-c("India","United States","Mexico","Canada","China, People's Republic of","Japan","Russian Federation","Germany","United Kingdom","European Union",
+           "ASEAN-5","New Zealand","Australia","Netherlands","Luxembourg","France","United Arab Emirates")
 
 dashboardPage(
   #defines header
