@@ -4,10 +4,12 @@ require(highcharter)
 #layout of the dashboard
 
 country<-c("India","United States","Mexico","Canada","China, People's Republic of","Japan","Russian Federation","Germany","United Kingdom","European Union",
-           "ASEAN-5","New Zealand","Australia","Netherlands","Luxembourg","France","Qatar","United Arab Emirates")
+           "ASEAN-5","New Zealand","Australia","Netherlands","Luxembourg",
+           "France","Qatar","United Arab Emirates","Saudi Arabia")
 
 dashboardPage(
   #defines header
+  skin = "red",
   dashboardHeader(
     title="Inflation Rates" ,
     dropdownMenu()
@@ -18,7 +20,8 @@ dashboardPage(
   dashboardSidebar(
     sidebarMenu(
       menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
-      menuItem("About", tabName = "about", icon = icon("th"))
+      menuItem("About", tabName = "about", icon = icon("th")),
+      menuItem("Trade Unions",tabName="unions",icon=icon("signal"))
     )
   ),
   
@@ -72,8 +75,18 @@ dashboardPage(
     #second tab menu- ABOUT
           tabItem(tabName="about",
                   
-                 h2("What is Inflation ?",style="text-align:center")
+                    h2("What is Inflation ?",style="text-align:center")
                   
+                  
+                  ),
+    
+          tabItem(tabName = "unions",
+                  
+                    h3("Time series of Inflation rates of Economic trade unions",align="center") ,
+                  
+                    box(
+                      highchartOutput("hc3"),
+                      width=12)
                   
                   )
     )#end tabitems
