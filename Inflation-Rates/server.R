@@ -23,7 +23,7 @@ server <- function(input, output) {
                              shared = TRUE, borderWidth = 2) %>%
                   hc_title(text="Time series plot of Inflation Rates",align="center") %>%
                   hc_subtitle(text="Data Source: IMF",align="center") %>%
-                  hc_add_theme(hc_theme_ffx()) 
+                  hc_add_theme(hc_theme_elementary()) 
                   #to add 3-d effects
                   #hc_chart(type = "column",
                            #options3d = list(enabled = TRUE, beta = 15, alpha = 15))
@@ -45,7 +45,8 @@ server <- function(input, output) {
         hc_add_series(name = "Germany", data = Ger$inflation) %>%
         hc_add_series(name="Japan",data=Japan$inflation) %>%
         #to add colors
-        hc_colors(c("red","blue","green","purple","darkpink","orange"))
+        hc_colors(c("red","blue","green","purple","darkpink","orange")) %>%
+        hc_add_theme(hc_theme_elementary())
       
       hc
       
@@ -58,8 +59,15 @@ server <- function(input, output) {
       union<-inf %>% filter(region==input$region)
       union$year<-as.numeric(union$year)
       union$inflation<-as.numeric(union$inflation)
+      
+      #plotting
       hchart(union,hcaes(x=year,y=inflation),type="area",color="#2B1F97") %>%
-        hc_add_theme(hc_theme_ffx()) 
+        hc_exporting(enabled = TRUE) %>% 
+        hc_tooltip(crosshairs = TRUE, backgroundColor = "#FCFFC5",
+                   shared = TRUE, borderWidth = 2) %>%
+        hc_title(text="Time series plot of Inflation Rates for Economic Unions",align="center") %>%
+        hc_subtitle(text="Data Source: IMF",align="center") %>%
+        hc_add_theme(hc_theme_elementary())
       
       
       
@@ -72,7 +80,12 @@ server <- function(input, output) {
       world$inflation<-as.numeric(world$inflation)
       #plotting the plot
       hchart(world,hcaes(x=year,y=inflation),type="area",color="#B915A3") %>%
-        hc_add_theme(hc_theme_ffx()) 
+        hc_exporting(enabled = TRUE) %>% 
+        hc_tooltip(crosshairs = TRUE, backgroundColor = "#FCFFC5",
+                   shared = TRUE, borderWidth = 2) %>%
+        hc_title(text="Time series plot of Inflation Rates for World",align="center") %>%
+        hc_subtitle(text="Data Source: IMF",align="center") %>%
+         hc_add_theme(hc_theme_elementary())
       
     })
   
