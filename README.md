@@ -1,7 +1,7 @@
 # Analzying-Inflation-Rates-Worldwide
 This project will aim at studying and analyzing the inflation rates of countries globally. The dataset is a public dataset downloaded from International Monetary Fund(IMF) which consists of the inflation rates of countries from 1980 to 2017 and the projected inflation rates of the countries till 2022.
 
-After analyzing I will be making a Shiny Dashboard in R to visualize the inflation rates of countries, economic unions as well as world.
+After analyzing, I will be making a __Shiny Dashboard__ in R to visualize the inflation rates of countries, economic unions as well as world.
 
 ### What is Inflation rate?
 
