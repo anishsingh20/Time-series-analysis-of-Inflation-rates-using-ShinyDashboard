@@ -3,6 +3,10 @@ This project will aim at studying and analyzing the inflation rates of countries
 
 After analyzing, I will be making a __Shiny Dashboard__ in R to visualize the inflation rates of countries, economic unions as well as world.
 
+The folder __Inflation-Rates__ contains the dashboard's code and its implementation in R. For visualizing I have used __'highcharter'__ package which is an amazing package to make beautiful and amazing plots in R for web apps and dashboards.The syntax for 'highharter' is similar to 'ggplot2' syntax.
+
+
+
 ### What is Inflation rate?
 
 Inflation rates are the general rate at which price of the goods and services within a particular economy are rising and the __purchasing power__ of the currency is declining due to the highly priced goods. High inflation is definately not good for an economy because it will always reduce the value for money. In genral central banks of an ecomony tries to and work towards reducing the inflation rate and avoiding __deflation__. 
