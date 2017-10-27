@@ -2,6 +2,42 @@ require(shinydashboard)
 require(ggplot2)
 require(dplyr)
 require(highcharter) #to plot amazing time series plots
+library(readxl)
+require(tidyr)
+
+
+
+
+inflation <- read_excel("inflation.xls")
+
+
+year<-c(1980:2022) #making a vector consisting of all years
+year<-as.character(year)#converting to character type to use in gather()
+
+
+inf<-inflation %>% gather(year,key = "Year",value="InflationRate")
+inf<-na.omit(inf) #omitting NA values
+
+names(inf)<-c("region","year","inflation")
+
+inf$year<-as.integer(inf$year)
+
+India<-filter(inf,region=="India")
+India$inflation<-as.numeric(India$inflation)
+India$year<-as.numeric(India$year)
+
+China<-filter(inf,region=="China, People's Republic of")
+Ger<-filter(inf,region=="Germany")
+Japan<-filter(inf,region=="Japan")
+US<-filter(inf,region=="United States")
+EU<-filter(inf,region=="European Union")
+UK<-filter(inf,region=="United Kingdom")
+Fr<-filter(inf,region=="France")
+uae<-filter(inf,region=="United Arab Emirates")
+
+
+
+
 
 server <- function(input, output) { 
   
@@ -36,7 +72,8 @@ server <- function(input, output) {
   
   
     output$hc2<-renderHighchart({
-      hc <- highchart() %>% 
+      
+     highchart() %>% 
         hc_xAxis(categories=inf$year) %>% 
         hc_add_series(name = "India", data = India$inflation) %>% 
         hc_add_series(name = "USA", data = US$inflation) %>%
@@ -48,7 +85,7 @@ server <- function(input, output) {
         hc_colors(c("red","blue","green","purple","darkpink","orange")) %>%
         hc_add_theme(hc_theme_elementary())
       
-      hc
+      
       
       
       

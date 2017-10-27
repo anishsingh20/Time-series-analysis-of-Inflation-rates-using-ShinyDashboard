@@ -1,0 +1,20 @@
+div {
+ font-family: times, Times New Roman, times-roman, georgia, serif;
+ color: #444;
+ font-size: 15px;
+ font-weight:bold;
+}
+
+div > p {
+  font-family:times-roman;
+  font-weight:lighter;
+  
+}
+.main-header .logo {
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+ color: #444;
+ font-size:28px;
+ line-height: 44px;
+ letter-spacing: -2px;
+ font-weight: bold;
+}

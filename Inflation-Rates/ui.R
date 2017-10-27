@@ -92,9 +92,10 @@ dashboardPage(
                         p(style="font-size:20px",strong("Inflation"),"rates are the general rate at which price of the goods and services 
                           within a particular economy are rising and the purchasing power of the currency 
                           is declining due to the highly priced goods. High inflation is definately not good for an economy 
-                          because it will always reduce the value for money.In genral central banks of an ecomony tries to and work towards reducing the inflation rate and avoiding deflation."),
+                          because it will always reduce the value for money.In genral central banks of an ecomony tries to and work towards reducing 
+                          the inflation rate and avoiding deflation."),
                           
-                          br(),
+                          
                           
                           
                         p(style="font-size:20px",strong("Deflation"), "is opposite of inflation. Delfation occurs when the inflation rates become negetive or are below 0. Deflation is more harmful and dangerous for an economy because it means that the prices of goods and services are going to decrease. Now this sounds amazing for consumers like us. But what actually happens is that the demand of goods and services have declined over a long term of time. 
