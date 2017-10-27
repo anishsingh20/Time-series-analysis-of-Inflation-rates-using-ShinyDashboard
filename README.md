@@ -1,5 +1,16 @@
 # Analzying-Inflation-Rates-Worldwide
-This project will aim at studying and analyzing the inflation rates of countries globally. The dataset is a public dataset downloaded from International Monetary Fund(IMF) which consists of the inflation rates of countries from 1980 to 2017 and the projected inflation rates of the countries till 2022.
+
+Link to the dashboard-https://anishsingh.shinyapps.io/Inflation-Rates/
+
+This project aims at studying and analyzing the inflation rates of countries globally. The dataset is a public dataset downloaded from International Monetary Fund(IMF) which consists of the inflation rates of countries from 1980 to 2017 and the projected inflation rates of the countries till 2022.
+
+After analyzing, I will make a __Shiny Dashboard__ in R to visualize the inflation rates of countries, economic trade unions as well as world.
+
+The folder __Inflation-Rates__ contains the dashboard's code and its implementation in R. For visualizing I have used __'highcharter'__ package which is an amazing package to make beautiful and amazing plots in R for web apps and dashboards.The syntax for 'highharter' is similar to 'ggplot2' syntax.
+
+More details about the package can be found at this link- http://jkunst.com/highcharter/ .
+
+
 
 ### What is Inflation rate?
 
@@ -13,3 +24,5 @@ __Deflation__ is opposite of inflation. Delfation occurs when the inflation rate
 ### Inflation Rates of India over time
 
 ![github plot](https://github.com/anishsingh20/Analzying-Inflation-Rates-Worldwide/blob/master/Plots/Inf-India.png)
+
+
