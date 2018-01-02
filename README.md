@@ -6,7 +6,7 @@ This project aims at studying and analyzing the inflation rates of countries and
 
 After analyzing, I will make a __Shiny Dashboard__ in R to visualize the inflation rates of countries, economic trade unions as well as world.
 
-The folder __Inflation-Rates__ contains the dashboard's code and its implementation in R. For visualizing I have used __'highcharter'__ package which is an amazing package to make beautiful and amazing plots in R for web apps and dashboards.The syntax for 'highharter' is similar to 'ggplot2' syntax.
+The folder __Inflation-Rates__ contains the dashboard's code and its implementation in R. For visualizing I have used __'highcharter'__ package which is an amazing package to make beautiful and amazing plots in R for web apps and dashboards.The syntax for 'highcharter' is similar to 'ggplot2' syntax.
 
 More details about the package can be found at this link- http://jkunst.com/highcharter/ .
 
