@@ -2,7 +2,7 @@
 
 This project aims at studying and analyzing the inflation rates of countries and major economic unions globally. The dataset is a public dataset downloaded from International Monetary Fund(IMF) which consists of the inflation rates of countries from 1980 to 2017 and the projected inflation rates of the countries till 2022.
 
-After basic descriptive and exploratory data analysis, I have made a __Shiny Dashboard__ in R to visualize the inflation rates of countries, economic trade unions as well as world. Link to the app is added below.
+After basic descriptive and exploratory data analysis, I have made a __Shiny Dashboard__ in R to visualize the inflation rates of countries, economic trade unions as well as world. Link to the deployed app is added below.
 
 Link to the app--https://anishwalia20.shinyapps.io/AnalysisofInflationRates/
 
