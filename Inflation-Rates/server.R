@@ -34,6 +34,8 @@ EU<-filter(inf,region=="European Union")
 UK<-filter(inf,region=="United Kingdom")
 Fr<-filter(inf,region=="France")
 uae<-filter(inf,region=="United Arab Emirates")
+Brl<-filter(inf,region=="Brazil")
+
 
 
 
@@ -81,8 +83,9 @@ server <- function(input, output) {
         hc_add_series(name = "China", data = China$inflation) %>%
         hc_add_series(name = "Germany", data = Ger$inflation) %>%
         hc_add_series(name="Japan",data=Japan$inflation) %>%
+        hc_add_series(name="Brazil",data=Brazil$inflation) %>%
         #to add colors
-        hc_colors(c("red","blue","green","purple","darkpink","orange")) %>%
+        hc_colors(c("red","blue","green","purple","darkpink","orange","orange")) %>%
         hc_add_theme(hc_theme_elementary())
       
       
